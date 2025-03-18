@@ -9,7 +9,7 @@ def notify_failure(context):
     task_instance = context['task_instance']
     subject = f"Task {task_instance.task_id} falhou na DAG {context['dag'].dag_id}"
     body = f"A task {task_instance.task_id} falhou. Verifique os logs para mais detalhes."
-    send_email(to=['email@email.com'], subject=subject, html_content=body)  #Please edit it with your email
+    send_email(to=['cvsalimoliveira@gmail.com'], subject=subject, html_content=body)  #Please edit it with your email
 
 # Function to notify by email in pipeline success cases.
 def notify_success():
@@ -38,18 +38,21 @@ dag = DAG(
 bronze_task = BashOperator(
     task_id='bronze_ingestion',
     bash_command='spark-submit --master local /opt/airflow/dags/bronze_ingestion.py',
+    on_failure_callback=notify_failure,
     dag=dag,
 )
 
 silver_task = BashOperator(
     task_id='silver_ingestion',
     bash_command='spark-submit --master local /opt/airflow/dags/silver_ingestion.py',
+    on_failure_callback=notify_failure,
     dag=dag,
 )
 
 gold_task = BashOperator(
     task_id='gold_ingestion',
     bash_command='spark-submit --master local /opt/airflow/dags/gold_ingestion.py',
+    on_failure_callback=notify_failure,
     dag=dag,
 )
 

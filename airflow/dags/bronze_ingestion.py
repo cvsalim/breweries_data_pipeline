@@ -6,7 +6,7 @@ import os
 
 spark = SparkSession.builder.appName("BronzeLayer").getOrCreate()
 API_URL = "https://api.openbrewerydb.org/breweries"
-bronze_path = os.getcwd()
+bronze_path = "medallion_data"
 os.makedirs(bronze_path, exist_ok=True)
 
 # Extract data
@@ -19,4 +19,4 @@ data = response.json()
 with open(f"{bronze_path}/bronze_layer.json", "w") as f:
     json.dump(data, f, indent=4)
 
-print("Bronze data has been storage")
+print(f"Bronze data has been stored at: {bronze_path}/bronze_layer.json")

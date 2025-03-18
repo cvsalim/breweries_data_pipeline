@@ -6,8 +6,8 @@ import os
 spark = SparkSession.builder.appName("GoldLayer").getOrCreate()
 
 # ETL Paths
-silver_path = os.getcwd() + "/silver_layer"
-gold_path = os.getcwd() + "/gold_layer"
+silver_path = "medallion_data/silver_layer"
+gold_path = "medallion_data/gold_layer"
 os.makedirs(gold_path, exist_ok=True)
 
 # Load silver data
@@ -19,6 +19,6 @@ agg_df = silver_df.groupBy("brewery_type", "state").count()
 # Salvar the gold data
 agg_df.write.mode("overwrite").parquet(gold_path)
 
-print("Gold data has been storaged")
+print("Gold data has been stored")
 
 #agg_df.show() #Run this command if you want to see the Dataframe result

@@ -6,8 +6,8 @@ import os
 spark = SparkSession.builder.appName("SilverLayer").getOrCreate()
 
 # ETL Paths
-bronze_path = os.getcwd() + "/bronze_layer.json"
-silver_path = os.getcwd() + "/silver_layer"
+bronze_path = "medallion_data/bronze_layer.json"
+silver_path = "medallion_data/silver_layer"
 
 # Reading and treating raw data
 df = spark.read.option("multiline", "true").json(bronze_path)
@@ -20,4 +20,4 @@ df1.printSchema()
 
 # Save data partitioned by city
 df1.write.mode("overwrite").partitionBy("city").parquet(silver_path)
-print(f"Parquet salvo em: {silver_path}")
+print(f"Parquet has been saved: {silver_path}")
