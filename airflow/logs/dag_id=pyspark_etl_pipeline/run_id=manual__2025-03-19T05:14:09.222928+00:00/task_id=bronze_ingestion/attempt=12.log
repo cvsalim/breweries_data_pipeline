@@ -1,0 +1,74 @@
+[2025-03-19T15:48:55.490+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-19T15:48:55.517+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pyspark_etl_pipeline.bronze_ingestion manual__2025-03-19T05:14:09.222928+00:00 [queued]>
+[2025-03-19T15:48:55.534+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pyspark_etl_pipeline.bronze_ingestion manual__2025-03-19T05:14:09.222928+00:00 [queued]>
+[2025-03-19T15:48:55.535+0000] {taskinstance.py:2867} INFO - Starting attempt 12 of 13
+[2025-03-19T15:48:55.556+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): bronze_ingestion> on 2025-03-19 05:14:09.222928+00:00
+[2025-03-19T15:48:55.568+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pyspark_etl_pipeline', 'bronze_ingestion', 'manual__2025-03-19T05:14:09.222928+00:00', '--job-id', '134', '--raw', '--subdir', 'DAGS_FOLDER/dag_pipeline.py', '--cfg-path', '/tmp/tmpsq6_ivsd']
+[2025-03-19T15:48:55.573+0000] {standard_task_runner.py:105} INFO - Job 134: Subtask bronze_ingestion
+[2025-03-19T15:48:55.575+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=355) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-03-19T15:48:55.576+0000] {standard_task_runner.py:72} INFO - Started process 356 to run task
+[2025-03-19T15:48:55.683+0000] {task_command.py:467} INFO - Running <TaskInstance: pyspark_etl_pipeline.bronze_ingestion manual__2025-03-19T05:14:09.222928+00:00 [running]> on host 40696cdf9f68
+[2025-03-19T15:48:55.816+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='caiovos@hotmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pyspark_etl_pipeline' AIRFLOW_CTX_TASK_ID='bronze_ingestion' AIRFLOW_CTX_EXECUTION_DATE='2025-03-19T05:14:09.222928+00:00' AIRFLOW_CTX_TRY_NUMBER='12' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-19T05:14:09.222928+00:00'
+[2025-03-19T15:48:55.817+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-19T15:48:55.835+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-03-19T15:48:55.838+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'spark-submit --master local /opt/***/dags/bronze_ingestion.py']
+[2025-03-19T15:48:55.848+0000] {subprocess.py:99} INFO - Output:
+[2025-03-19T15:49:00.440+0000] {subprocess.py:106} INFO - 25/03/19 15:49:00 INFO SparkContext: Running Spark version 3.5.5
+[2025-03-19T15:49:00.443+0000] {subprocess.py:106} INFO - 25/03/19 15:49:00 INFO SparkContext: OS info Linux, 6.12.5-linuxkit, amd64
+[2025-03-19T15:49:00.444+0000] {subprocess.py:106} INFO - 25/03/19 15:49:00 INFO SparkContext: Java version 17.0.14
+[2025-03-19T15:49:00.517+0000] {subprocess.py:106} INFO - 25/03/19 15:49:00 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-03-19T15:49:00.635+0000] {subprocess.py:106} INFO - 25/03/19 15:49:00 INFO ResourceUtils: ==============================================================
+[2025-03-19T15:49:00.639+0000] {subprocess.py:106} INFO - 25/03/19 15:49:00 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2025-03-19T15:49:00.640+0000] {subprocess.py:106} INFO - 25/03/19 15:49:00 INFO ResourceUtils: ==============================================================
+[2025-03-19T15:49:00.641+0000] {subprocess.py:106} INFO - 25/03/19 15:49:00 INFO SparkContext: Submitted application: BronzeLayer
+[2025-03-19T15:49:00.673+0000] {subprocess.py:106} INFO - 25/03/19 15:49:00 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2025-03-19T15:49:00.687+0000] {subprocess.py:106} INFO - 25/03/19 15:49:00 INFO ResourceProfile: Limiting resource is cpu
+[2025-03-19T15:49:00.689+0000] {subprocess.py:106} INFO - 25/03/19 15:49:00 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2025-03-19T15:49:00.753+0000] {subprocess.py:106} INFO - 25/03/19 15:49:00 INFO SecurityManager: Changing view acls to: default
+[2025-03-19T15:49:00.755+0000] {subprocess.py:106} INFO - 25/03/19 15:49:00 INFO SecurityManager: Changing modify acls to: default
+[2025-03-19T15:49:00.756+0000] {subprocess.py:106} INFO - 25/03/19 15:49:00 INFO SecurityManager: Changing view acls groups to:
+[2025-03-19T15:49:00.758+0000] {subprocess.py:106} INFO - 25/03/19 15:49:00 INFO SecurityManager: Changing modify acls groups to:
+[2025-03-19T15:49:00.759+0000] {subprocess.py:106} INFO - 25/03/19 15:49:00 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: default; groups with view permissions: EMPTY; users with modify permissions: default; groups with modify permissions: EMPTY
+[2025-03-19T15:49:01.132+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO Utils: Successfully started service 'sparkDriver' on port 43535.
+[2025-03-19T15:49:01.166+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO SparkEnv: Registering MapOutputTracker
+[2025-03-19T15:49:01.241+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO SparkEnv: Registering BlockManagerMaster
+[2025-03-19T15:49:01.272+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2025-03-19T15:49:01.274+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2025-03-19T15:49:01.280+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2025-03-19T15:49:01.341+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-c72670eb-d0fb-49f4-a021-46bf20c77ee0
+[2025-03-19T15:49:01.374+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2025-03-19T15:49:01.429+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO SparkEnv: Registering OutputCommitCoordinator
+[2025-03-19T15:49:01.623+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2025-03-19T15:49:01.712+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2025-03-19T15:49:01.860+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO Executor: Starting executor ID driver on host 40696cdf9f68
+[2025-03-19T15:49:01.861+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO Executor: OS info Linux, 6.12.5-linuxkit, amd64
+[2025-03-19T15:49:01.862+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO Executor: Java version 17.0.14
+[2025-03-19T15:49:01.873+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2025-03-19T15:49:01.874+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@6710369a for default.
+[2025-03-19T15:49:01.906+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 43065.
+[2025-03-19T15:49:01.907+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO NettyBlockTransferService: Server created on 40696cdf9f68:43065
+[2025-03-19T15:49:01.909+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2025-03-19T15:49:01.917+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 40696cdf9f68, 43065, None)
+[2025-03-19T15:49:01.923+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO BlockManagerMasterEndpoint: Registering block manager 40696cdf9f68:43065 with 434.4 MiB RAM, BlockManagerId(driver, 40696cdf9f68, 43065, None)
+[2025-03-19T15:49:01.927+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 40696cdf9f68, 43065, None)
+[2025-03-19T15:49:01.929+0000] {subprocess.py:106} INFO - 25/03/19 15:49:01 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 40696cdf9f68, 43065, None)
+[2025-03-19T15:49:03.966+0000] {subprocess.py:106} INFO - Bronze data has been stored at: medallion_data/bronze_layer.json
+[2025-03-19T15:49:04.100+0000] {subprocess.py:106} INFO - 25/03/19 15:49:04 INFO SparkContext: Invoking stop() from shutdown hook
+[2025-03-19T15:49:04.101+0000] {subprocess.py:106} INFO - 25/03/19 15:49:04 INFO SparkContext: SparkContext is stopping with exitCode 0.
+[2025-03-19T15:49:04.142+0000] {subprocess.py:106} INFO - 25/03/19 15:49:04 INFO SparkUI: Stopped Spark web UI at http://40696cdf9f68:4040
+[2025-03-19T15:49:04.169+0000] {subprocess.py:106} INFO - 25/03/19 15:49:04 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2025-03-19T15:49:04.196+0000] {subprocess.py:106} INFO - 25/03/19 15:49:04 INFO MemoryStore: MemoryStore cleared
+[2025-03-19T15:49:04.197+0000] {subprocess.py:106} INFO - 25/03/19 15:49:04 INFO BlockManager: BlockManager stopped
+[2025-03-19T15:49:04.217+0000] {subprocess.py:106} INFO - 25/03/19 15:49:04 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2025-03-19T15:49:04.225+0000] {subprocess.py:106} INFO - 25/03/19 15:49:04 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2025-03-19T15:49:04.240+0000] {subprocess.py:106} INFO - 25/03/19 15:49:04 INFO SparkContext: Successfully stopped SparkContext
+[2025-03-19T15:49:04.242+0000] {subprocess.py:106} INFO - 25/03/19 15:49:04 INFO ShutdownHookManager: Shutdown hook called
+[2025-03-19T15:49:04.245+0000] {subprocess.py:106} INFO - 25/03/19 15:49:04 INFO ShutdownHookManager: Deleting directory /tmp/spark-0c6faeb6-c9cb-4cf5-986f-eadc0369ab52
+[2025-03-19T15:49:04.255+0000] {subprocess.py:106} INFO - 25/03/19 15:49:04 INFO ShutdownHookManager: Deleting directory /tmp/spark-0c6faeb6-c9cb-4cf5-986f-eadc0369ab52/pyspark-9f96522b-ce92-4cbc-93f0-84ee8e1a958f
+[2025-03-19T15:49:04.263+0000] {subprocess.py:106} INFO - 25/03/19 15:49:04 INFO ShutdownHookManager: Deleting directory /tmp/spark-4e10822e-0ccb-45cb-b109-91436268d751
+[2025-03-19T15:49:04.310+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-03-19T15:49:04.366+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-19T15:49:04.367+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=pyspark_etl_pipeline, task_id=bronze_ingestion, run_id=manual__2025-03-19T05:14:09.222928+00:00, execution_date=20250319T051409, start_date=20250319T154855, end_date=20250319T154904
+[2025-03-19T15:49:04.542+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-19T15:49:04.676+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-19T15:49:04.681+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

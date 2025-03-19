@@ -79,6 +79,9 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    build:
+      context: .
+      dockerfile: Dockerfile
 
   airflow-scheduler:
     <<: *airflow-common

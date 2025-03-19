@@ -1,0 +1,443 @@
+[2025-03-19T16:21:40.349+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-19T16:21:40.383+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pyspark_etl_pipeline.gold_ingestion manual__2025-03-19T05:14:09.222928+00:00 [queued]>
+[2025-03-19T16:21:40.400+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pyspark_etl_pipeline.gold_ingestion manual__2025-03-19T05:14:09.222928+00:00 [queued]>
+[2025-03-19T16:21:40.401+0000] {taskinstance.py:2867} INFO - Starting attempt 4 of 4
+[2025-03-19T16:21:40.419+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): gold_ingestion> on 2025-03-19 05:14:09.222928+00:00
+[2025-03-19T16:21:40.428+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'pyspark_etl_pipeline', 'gold_ingestion', 'manual__2025-03-19T05:14:09.222928+00:00', '--job-id', '153', '--raw', '--subdir', 'DAGS_FOLDER/dag_pipeline.py', '--cfg-path', '/tmp/tmpye0_74m6']
+[2025-03-19T16:21:40.432+0000] {standard_task_runner.py:105} INFO - Job 153: Subtask gold_ingestion
+[2025-03-19T16:21:40.434+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=976) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-03-19T16:21:40.436+0000] {standard_task_runner.py:72} INFO - Started process 977 to run task
+[2025-03-19T16:21:40.502+0000] {task_command.py:467} INFO - Running <TaskInstance: pyspark_etl_pipeline.gold_ingestion manual__2025-03-19T05:14:09.222928+00:00 [running]> on host e20319ba40e1
+[2025-03-19T16:21:40.642+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='caiovos@hotmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pyspark_etl_pipeline' AIRFLOW_CTX_TASK_ID='gold_ingestion' AIRFLOW_CTX_EXECUTION_DATE='2025-03-19T05:14:09.222928+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-19T05:14:09.222928+00:00'
+[2025-03-19T16:21:40.643+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-19T16:21:40.688+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-03-19T16:21:40.689+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'spark-submit --master local /opt/***/dags/gold_ingestion.py']
+[2025-03-19T16:21:40.700+0000] {subprocess.py:99} INFO - Output:
+[2025-03-19T16:21:46.155+0000] {subprocess.py:106} INFO - 25/03/19 16:21:46 INFO SparkContext: Running Spark version 3.5.5
+[2025-03-19T16:21:46.161+0000] {subprocess.py:106} INFO - 25/03/19 16:21:46 INFO SparkContext: OS info Linux, 6.12.5-linuxkit, amd64
+[2025-03-19T16:21:46.163+0000] {subprocess.py:106} INFO - 25/03/19 16:21:46 INFO SparkContext: Java version 17.0.14
+[2025-03-19T16:21:46.303+0000] {subprocess.py:106} INFO - 25/03/19 16:21:46 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-03-19T16:21:46.467+0000] {subprocess.py:106} INFO - 25/03/19 16:21:46 INFO ResourceUtils: ==============================================================
+[2025-03-19T16:21:46.467+0000] {subprocess.py:106} INFO - 25/03/19 16:21:46 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2025-03-19T16:21:46.469+0000] {subprocess.py:106} INFO - 25/03/19 16:21:46 INFO ResourceUtils: ==============================================================
+[2025-03-19T16:21:46.470+0000] {subprocess.py:106} INFO - 25/03/19 16:21:46 INFO SparkContext: Submitted application: GoldLayer
+[2025-03-19T16:21:46.499+0000] {subprocess.py:106} INFO - 25/03/19 16:21:46 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2025-03-19T16:21:46.511+0000] {subprocess.py:106} INFO - 25/03/19 16:21:46 INFO ResourceProfile: Limiting resource is cpu
+[2025-03-19T16:21:46.514+0000] {subprocess.py:106} INFO - 25/03/19 16:21:46 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2025-03-19T16:21:46.604+0000] {subprocess.py:106} INFO - 25/03/19 16:21:46 INFO SecurityManager: Changing view acls to: default
+[2025-03-19T16:21:46.607+0000] {subprocess.py:106} INFO - 25/03/19 16:21:46 INFO SecurityManager: Changing modify acls to: default
+[2025-03-19T16:21:46.609+0000] {subprocess.py:106} INFO - 25/03/19 16:21:46 INFO SecurityManager: Changing view acls groups to:
+[2025-03-19T16:21:46.610+0000] {subprocess.py:106} INFO - 25/03/19 16:21:46 INFO SecurityManager: Changing modify acls groups to:
+[2025-03-19T16:21:46.611+0000] {subprocess.py:106} INFO - 25/03/19 16:21:46 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: default; groups with view permissions: EMPTY; users with modify permissions: default; groups with modify permissions: EMPTY
+[2025-03-19T16:21:46.944+0000] {subprocess.py:106} INFO - 25/03/19 16:21:46 INFO Utils: Successfully started service 'sparkDriver' on port 46259.
+[2025-03-19T16:21:46.988+0000] {subprocess.py:106} INFO - 25/03/19 16:21:46 INFO SparkEnv: Registering MapOutputTracker
+[2025-03-19T16:21:47.059+0000] {subprocess.py:106} INFO - 25/03/19 16:21:47 INFO SparkEnv: Registering BlockManagerMaster
+[2025-03-19T16:21:47.097+0000] {subprocess.py:106} INFO - 25/03/19 16:21:47 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2025-03-19T16:21:47.098+0000] {subprocess.py:106} INFO - 25/03/19 16:21:47 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2025-03-19T16:21:47.104+0000] {subprocess.py:106} INFO - 25/03/19 16:21:47 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2025-03-19T16:21:47.143+0000] {subprocess.py:106} INFO - 25/03/19 16:21:47 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-ee80b8b6-9a14-4622-9d3b-6fda76262d50
+[2025-03-19T16:21:47.175+0000] {subprocess.py:106} INFO - 25/03/19 16:21:47 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2025-03-19T16:21:47.207+0000] {subprocess.py:106} INFO - 25/03/19 16:21:47 INFO SparkEnv: Registering OutputCommitCoordinator
+[2025-03-19T16:21:47.467+0000] {subprocess.py:106} INFO - 25/03/19 16:21:47 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2025-03-19T16:21:47.567+0000] {subprocess.py:106} INFO - 25/03/19 16:21:47 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2025-03-19T16:21:47.779+0000] {subprocess.py:106} INFO - 25/03/19 16:21:47 INFO Executor: Starting executor ID driver on host e20319ba40e1
+[2025-03-19T16:21:47.781+0000] {subprocess.py:106} INFO - 25/03/19 16:21:47 INFO Executor: OS info Linux, 6.12.5-linuxkit, amd64
+[2025-03-19T16:21:47.783+0000] {subprocess.py:106} INFO - 25/03/19 16:21:47 INFO Executor: Java version 17.0.14
+[2025-03-19T16:21:47.801+0000] {subprocess.py:106} INFO - 25/03/19 16:21:47 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2025-03-19T16:21:47.802+0000] {subprocess.py:106} INFO - 25/03/19 16:21:47 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@61f102b2 for default.
+[2025-03-19T16:21:47.849+0000] {subprocess.py:106} INFO - 25/03/19 16:21:47 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 34773.
+[2025-03-19T16:21:47.852+0000] {subprocess.py:106} INFO - 25/03/19 16:21:47 INFO NettyBlockTransferService: Server created on e20319ba40e1:34773
+[2025-03-19T16:21:47.855+0000] {subprocess.py:106} INFO - 25/03/19 16:21:47 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2025-03-19T16:21:47.875+0000] {subprocess.py:106} INFO - 25/03/19 16:21:47 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, e20319ba40e1, 34773, None)
+[2025-03-19T16:21:47.880+0000] {subprocess.py:106} INFO - 25/03/19 16:21:47 INFO BlockManagerMasterEndpoint: Registering block manager e20319ba40e1:34773 with 434.4 MiB RAM, BlockManagerId(driver, e20319ba40e1, 34773, None)
+[2025-03-19T16:21:47.885+0000] {subprocess.py:106} INFO - 25/03/19 16:21:47 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, e20319ba40e1, 34773, None)
+[2025-03-19T16:21:47.888+0000] {subprocess.py:106} INFO - 25/03/19 16:21:47 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, e20319ba40e1, 34773, None)
+[2025-03-19T16:21:48.803+0000] {subprocess.py:106} INFO - 25/03/19 16:21:48 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2025-03-19T16:21:48.815+0000] {subprocess.py:106} INFO - 25/03/19 16:21:48 INFO SharedState: Warehouse path is 'file:/tmp/***tmpx2kjy61i/spark-warehouse'.
+[2025-03-19T16:21:52.503+0000] {subprocess.py:106} INFO - 25/03/19 16:21:52 INFO HadoopFSUtils: Listing leaf files and directories in parallel under 46 paths. The first several paths are: file:/opt/***/dags/medallion_data/silver_layer/city=Raleigh, file:/opt/***/dags/medallion_data/silver_layer/city=Louisville, file:/opt/***/dags/medallion_data/silver_layer/city=Petaluma, file:/opt/***/dags/medallion_data/silver_layer/city=Cincinnati, file:/opt/***/dags/medallion_data/silver_layer/city=Knox, file:/opt/***/dags/medallion_data/silver_layer/city=San Diego, file:/opt/***/dags/medallion_data/silver_layer/city=Mount Pleasant, file:/opt/***/dags/medallion_data/silver_layer/city=John Day, file:/opt/***/dags/medallion_data/silver_layer/city=Houston, file:/opt/***/dags/medallion_data/silver_layer/city=Denver.
+[2025-03-19T16:21:54.322+0000] {subprocess.py:106} INFO - 25/03/19 16:21:54 INFO SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+[2025-03-19T16:21:54.459+0000] {subprocess.py:106} INFO - 25/03/19 16:21:54 INFO DAGScheduler: Got job 0 (parquet at NativeMethodAccessorImpl.java:0) with 46 output partitions
+[2025-03-19T16:21:54.469+0000] {subprocess.py:106} INFO - 25/03/19 16:21:54 INFO DAGScheduler: Final stage: ResultStage 0 (parquet at NativeMethodAccessorImpl.java:0)
+[2025-03-19T16:21:54.471+0000] {subprocess.py:106} INFO - 25/03/19 16:21:54 INFO DAGScheduler: Parents of final stage: List()
+[2025-03-19T16:21:54.474+0000] {subprocess.py:106} INFO - 25/03/19 16:21:54 INFO DAGScheduler: Missing parents: List()
+[2025-03-19T16:21:54.507+0000] {subprocess.py:106} INFO - 25/03/19 16:21:54 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[1] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2025-03-19T16:21:54.817+0000] {subprocess.py:106} INFO - 25/03/19 16:21:54 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 102.6 KiB, free 434.3 MiB)
+[2025-03-19T16:21:55.048+0000] {subprocess.py:106} INFO - 25/03/19 16:21:55 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 36.8 KiB, free 434.3 MiB)
+[2025-03-19T16:21:55.055+0000] {subprocess.py:106} INFO - 25/03/19 16:21:55 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on e20319ba40e1:34773 (size: 36.8 KiB, free: 434.4 MiB)
+[2025-03-19T16:21:55.064+0000] {subprocess.py:106} INFO - 25/03/19 16:21:55 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1585
+[2025-03-19T16:21:55.124+0000] {subprocess.py:106} INFO - 25/03/19 16:21:55 INFO DAGScheduler: Submitting 46 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at parquet at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+[2025-03-19T16:21:55.132+0000] {subprocess.py:106} INFO - 25/03/19 16:21:55 INFO TaskSchedulerImpl: Adding task set 0.0 with 46 tasks resource profile 0
+[2025-03-19T16:21:55.413+0000] {subprocess.py:106} INFO - 25/03/19 16:21:55 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (e20319ba40e1, executor driver, partition 0, PROCESS_LOCAL, 9181 bytes)
+[2025-03-19T16:21:55.500+0000] {subprocess.py:106} INFO - 25/03/19 16:21:55 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+[2025-03-19T16:21:55.910+0000] {subprocess.py:106} INFO - 25/03/19 16:21:55 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2798 bytes result sent to driver
+[2025-03-19T16:21:55.925+0000] {subprocess.py:106} INFO - 25/03/19 16:21:55 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (e20319ba40e1, executor driver, partition 1, PROCESS_LOCAL, 9184 bytes)
+[2025-03-19T16:21:55.932+0000] {subprocess.py:106} INFO - 25/03/19 16:21:55 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+[2025-03-19T16:21:55.945+0000] {subprocess.py:106} INFO - 25/03/19 16:21:55 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 610 ms on e20319ba40e1 (executor driver) (1/46)
+[2025-03-19T16:21:55.987+0000] {subprocess.py:106} INFO - 25/03/19 16:21:55 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 2761 bytes result sent to driver
+[2025-03-19T16:21:55.995+0000] {subprocess.py:106} INFO - 25/03/19 16:21:55 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2) (e20319ba40e1, executor driver, partition 2, PROCESS_LOCAL, 9182 bytes)
+[2025-03-19T16:21:55.999+0000] {subprocess.py:106} INFO - 25/03/19 16:21:55 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+[2025-03-19T16:21:56.001+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 77 ms on e20319ba40e1 (executor driver) (2/46)
+[2025-03-19T16:21:56.059+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 2757 bytes result sent to driver
+[2025-03-19T16:21:56.069+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3) (e20319ba40e1, executor driver, partition 3, PROCESS_LOCAL, 9184 bytes)
+[2025-03-19T16:21:56.078+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+[2025-03-19T16:21:56.082+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 86 ms on e20319ba40e1 (executor driver) (3/46)
+[2025-03-19T16:21:56.154+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 2804 bytes result sent to driver
+[2025-03-19T16:21:56.165+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4) (e20319ba40e1, executor driver, partition 4, PROCESS_LOCAL, 9178 bytes)
+[2025-03-19T16:21:56.170+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO Executor: Running task 4.0 in stage 0.0 (TID 4)
+[2025-03-19T16:21:56.173+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 109 ms on e20319ba40e1 (executor driver) (4/46)
+[2025-03-19T16:21:56.208+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO Executor: Finished task 4.0 in stage 0.0 (TID 4). 2706 bytes result sent to driver
+[2025-03-19T16:21:56.213+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5) (e20319ba40e1, executor driver, partition 5, PROCESS_LOCAL, 9185 bytes)
+[2025-03-19T16:21:56.215+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO Executor: Running task 5.0 in stage 0.0 (TID 5)
+[2025-03-19T16:21:56.221+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 55 ms on e20319ba40e1 (executor driver) (5/46)
+[2025-03-19T16:21:56.265+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO Executor: Finished task 5.0 in stage 0.0 (TID 5). 2763 bytes result sent to driver
+[2025-03-19T16:21:56.268+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6) (e20319ba40e1, executor driver, partition 6, PROCESS_LOCAL, 9190 bytes)
+[2025-03-19T16:21:56.270+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO Executor: Running task 6.0 in stage 0.0 (TID 6)
+[2025-03-19T16:21:56.274+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 63 ms on e20319ba40e1 (executor driver) (6/46)
+[2025-03-19T16:21:56.339+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO Executor: Finished task 6.0 in stage 0.0 (TID 6). 2816 bytes result sent to driver
+[2025-03-19T16:21:56.345+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7) (e20319ba40e1, executor driver, partition 7, PROCESS_LOCAL, 9184 bytes)
+[2025-03-19T16:21:56.347+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO Executor: Running task 7.0 in stage 0.0 (TID 7)
+[2025-03-19T16:21:56.348+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 81 ms on e20319ba40e1 (executor driver) (7/46)
+[2025-03-19T16:21:56.616+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO Executor: Finished task 7.0 in stage 0.0 (TID 7). 2761 bytes result sent to driver
+[2025-03-19T16:21:56.622+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO TaskSetManager: Starting task 8.0 in stage 0.0 (TID 8) (e20319ba40e1, executor driver, partition 8, PROCESS_LOCAL, 9181 bytes)
+[2025-03-19T16:21:56.629+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO Executor: Running task 8.0 in stage 0.0 (TID 8)
+[2025-03-19T16:21:56.636+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 293 ms on e20319ba40e1 (executor driver) (8/46)
+[2025-03-19T16:21:56.887+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO Executor: Finished task 8.0 in stage 0.0 (TID 8). 2755 bytes result sent to driver
+[2025-03-19T16:21:56.917+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO TaskSetManager: Starting task 9.0 in stage 0.0 (TID 9) (e20319ba40e1, executor driver, partition 9, PROCESS_LOCAL, 9180 bytes)
+[2025-03-19T16:21:56.938+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO Executor: Running task 9.0 in stage 0.0 (TID 9)
+[2025-03-19T16:21:56.941+0000] {subprocess.py:106} INFO - 25/03/19 16:21:56 INFO TaskSetManager: Finished task 8.0 in stage 0.0 (TID 8) in 321 ms on e20319ba40e1 (executor driver) (9/46)
+[2025-03-19T16:21:57.223+0000] {subprocess.py:106} INFO - 25/03/19 16:21:57 INFO Executor: Finished task 9.0 in stage 0.0 (TID 9). 2753 bytes result sent to driver
+[2025-03-19T16:21:57.286+0000] {subprocess.py:106} INFO - 25/03/19 16:21:57 INFO TaskSetManager: Starting task 10.0 in stage 0.0 (TID 10) (e20319ba40e1, executor driver, partition 10, PROCESS_LOCAL, 9181 bytes)
+[2025-03-19T16:21:57.289+0000] {subprocess.py:106} INFO - 25/03/19 16:21:57 INFO Executor: Running task 10.0 in stage 0.0 (TID 10)
+[2025-03-19T16:21:57.301+0000] {subprocess.py:106} INFO - 25/03/19 16:21:57 INFO TaskSetManager: Finished task 9.0 in stage 0.0 (TID 9) in 397 ms on e20319ba40e1 (executor driver) (10/46)
+[2025-03-19T16:21:57.638+0000] {subprocess.py:106} INFO - 25/03/19 16:21:57 INFO Executor: Finished task 10.0 in stage 0.0 (TID 10). 2755 bytes result sent to driver
+[2025-03-19T16:21:57.697+0000] {subprocess.py:106} INFO - 25/03/19 16:21:57 INFO TaskSetManager: Starting task 11.0 in stage 0.0 (TID 11) (e20319ba40e1, executor driver, partition 11, PROCESS_LOCAL, 9184 bytes)
+[2025-03-19T16:21:57.705+0000] {subprocess.py:106} INFO - 25/03/19 16:21:57 INFO Executor: Running task 11.0 in stage 0.0 (TID 11)
+[2025-03-19T16:21:57.713+0000] {subprocess.py:106} INFO - 25/03/19 16:21:57 INFO TaskSetManager: Finished task 10.0 in stage 0.0 (TID 10) in 443 ms on e20319ba40e1 (executor driver) (11/46)
+[2025-03-19T16:21:57.744+0000] {subprocess.py:106} INFO - 25/03/19 16:21:57 INFO Executor: Finished task 11.0 in stage 0.0 (TID 11). 2761 bytes result sent to driver
+[2025-03-19T16:21:57.786+0000] {subprocess.py:106} INFO - 25/03/19 16:21:57 INFO TaskSetManager: Starting task 12.0 in stage 0.0 (TID 12) (e20319ba40e1, executor driver, partition 12, PROCESS_LOCAL, 9181 bytes)
+[2025-03-19T16:21:57.792+0000] {subprocess.py:106} INFO - 25/03/19 16:21:57 INFO Executor: Running task 12.0 in stage 0.0 (TID 12)
+[2025-03-19T16:21:57.795+0000] {subprocess.py:106} INFO - 25/03/19 16:21:57 INFO TaskSetManager: Finished task 11.0 in stage 0.0 (TID 11) in 126 ms on e20319ba40e1 (executor driver) (12/46)
+[2025-03-19T16:21:58.033+0000] {subprocess.py:106} INFO - 25/03/19 16:21:57 INFO Executor: Finished task 12.0 in stage 0.0 (TID 12). 2755 bytes result sent to driver
+[2025-03-19T16:21:58.039+0000] {subprocess.py:106} INFO - 25/03/19 16:21:57 INFO TaskSetManager: Starting task 13.0 in stage 0.0 (TID 13) (e20319ba40e1, executor driver, partition 13, PROCESS_LOCAL, 9187 bytes)
+[2025-03-19T16:21:58.043+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO Executor: Running task 13.0 in stage 0.0 (TID 13)
+[2025-03-19T16:21:58.106+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO TaskSetManager: Finished task 12.0 in stage 0.0 (TID 12) in 351 ms on e20319ba40e1 (executor driver) (13/46)
+[2025-03-19T16:21:58.342+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO Executor: Finished task 13.0 in stage 0.0 (TID 13). 2767 bytes result sent to driver
+[2025-03-19T16:21:58.358+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO TaskSetManager: Starting task 14.0 in stage 0.0 (TID 14) (e20319ba40e1, executor driver, partition 14, PROCESS_LOCAL, 9181 bytes)
+[2025-03-19T16:21:58.380+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO TaskSetManager: Finished task 13.0 in stage 0.0 (TID 13) in 413 ms on e20319ba40e1 (executor driver) (14/46)
+[2025-03-19T16:21:58.391+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO Executor: Running task 14.0 in stage 0.0 (TID 14)
+[2025-03-19T16:21:58.741+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO Executor: Finished task 14.0 in stage 0.0 (TID 14). 2798 bytes result sent to driver
+[2025-03-19T16:21:58.753+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO TaskSetManager: Starting task 15.0 in stage 0.0 (TID 15) (e20319ba40e1, executor driver, partition 15, PROCESS_LOCAL, 9182 bytes)
+[2025-03-19T16:21:58.757+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO Executor: Running task 15.0 in stage 0.0 (TID 15)
+[2025-03-19T16:21:58.763+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO TaskSetManager: Finished task 14.0 in stage 0.0 (TID 14) in 418 ms on e20319ba40e1 (executor driver) (15/46)
+[2025-03-19T16:21:58.832+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO Executor: Finished task 15.0 in stage 0.0 (TID 15). 2757 bytes result sent to driver
+[2025-03-19T16:21:58.836+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO TaskSetManager: Starting task 16.0 in stage 0.0 (TID 16) (e20319ba40e1, executor driver, partition 16, PROCESS_LOCAL, 9181 bytes)
+[2025-03-19T16:21:58.838+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO Executor: Running task 16.0 in stage 0.0 (TID 16)
+[2025-03-19T16:21:58.854+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO TaskSetManager: Finished task 15.0 in stage 0.0 (TID 15) in 103 ms on e20319ba40e1 (executor driver) (16/46)
+[2025-03-19T16:21:58.876+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO Executor: Finished task 16.0 in stage 0.0 (TID 16). 2755 bytes result sent to driver
+[2025-03-19T16:21:58.883+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO TaskSetManager: Starting task 17.0 in stage 0.0 (TID 17) (e20319ba40e1, executor driver, partition 17, PROCESS_LOCAL, 9190 bytes)
+[2025-03-19T16:21:58.888+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO Executor: Running task 17.0 in stage 0.0 (TID 17)
+[2025-03-19T16:21:58.895+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO TaskSetManager: Finished task 16.0 in stage 0.0 (TID 16) in 55 ms on e20319ba40e1 (executor driver) (17/46)
+[2025-03-19T16:21:58.932+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO Executor: Finished task 17.0 in stage 0.0 (TID 17). 2730 bytes result sent to driver
+[2025-03-19T16:21:58.943+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO TaskSetManager: Starting task 18.0 in stage 0.0 (TID 18) (e20319ba40e1, executor driver, partition 18, PROCESS_LOCAL, 9179 bytes)
+[2025-03-19T16:21:58.947+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO TaskSetManager: Finished task 17.0 in stage 0.0 (TID 17) in 58 ms on e20319ba40e1 (executor driver) (18/46)
+[2025-03-19T16:21:58.955+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO Executor: Running task 18.0 in stage 0.0 (TID 18)
+[2025-03-19T16:21:58.981+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO Executor: Finished task 18.0 in stage 0.0 (TID 18). 2751 bytes result sent to driver
+[2025-03-19T16:21:58.986+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO TaskSetManager: Starting task 19.0 in stage 0.0 (TID 19) (e20319ba40e1, executor driver, partition 19, PROCESS_LOCAL, 9188 bytes)
+[2025-03-19T16:21:58.988+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO TaskSetManager: Finished task 18.0 in stage 0.0 (TID 18) in 51 ms on e20319ba40e1 (executor driver) (19/46)
+[2025-03-19T16:21:58.989+0000] {subprocess.py:106} INFO - 25/03/19 16:21:58 INFO Executor: Running task 19.0 in stage 0.0 (TID 19)
+[2025-03-19T16:21:59.020+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO Executor: Finished task 19.0 in stage 0.0 (TID 19). 2769 bytes result sent to driver
+[2025-03-19T16:21:59.025+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO TaskSetManager: Starting task 20.0 in stage 0.0 (TID 20) (e20319ba40e1, executor driver, partition 20, PROCESS_LOCAL, 9186 bytes)
+[2025-03-19T16:21:59.027+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO Executor: Running task 20.0 in stage 0.0 (TID 20)
+[2025-03-19T16:21:59.033+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO TaskSetManager: Finished task 19.0 in stage 0.0 (TID 19) in 49 ms on e20319ba40e1 (executor driver) (20/46)
+[2025-03-19T16:21:59.058+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO Executor: Finished task 20.0 in stage 0.0 (TID 20). 2722 bytes result sent to driver
+[2025-03-19T16:21:59.060+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO TaskSetManager: Starting task 21.0 in stage 0.0 (TID 21) (e20319ba40e1, executor driver, partition 21, PROCESS_LOCAL, 9184 bytes)
+[2025-03-19T16:21:59.061+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO Executor: Running task 21.0 in stage 0.0 (TID 21)
+[2025-03-19T16:21:59.062+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO TaskSetManager: Finished task 20.0 in stage 0.0 (TID 20) in 37 ms on e20319ba40e1 (executor driver) (21/46)
+[2025-03-19T16:21:59.087+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO Executor: Finished task 21.0 in stage 0.0 (TID 21). 2718 bytes result sent to driver
+[2025-03-19T16:21:59.089+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO TaskSetManager: Starting task 22.0 in stage 0.0 (TID 22) (e20319ba40e1, executor driver, partition 22, PROCESS_LOCAL, 9182 bytes)
+[2025-03-19T16:21:59.095+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO Executor: Running task 22.0 in stage 0.0 (TID 22)
+[2025-03-19T16:21:59.096+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO TaskSetManager: Finished task 21.0 in stage 0.0 (TID 21) in 39 ms on e20319ba40e1 (executor driver) (22/46)
+[2025-03-19T16:21:59.258+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO Executor: Finished task 22.0 in stage 0.0 (TID 22). 2800 bytes result sent to driver
+[2025-03-19T16:21:59.281+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO TaskSetManager: Starting task 23.0 in stage 0.0 (TID 23) (e20319ba40e1, executor driver, partition 23, PROCESS_LOCAL, 9186 bytes)
+[2025-03-19T16:21:59.286+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO Executor: Running task 23.0 in stage 0.0 (TID 23)
+[2025-03-19T16:21:59.301+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO TaskSetManager: Finished task 22.0 in stage 0.0 (TID 22) in 197 ms on e20319ba40e1 (executor driver) (23/46)
+[2025-03-19T16:21:59.363+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO Executor: Finished task 23.0 in stage 0.0 (TID 23). 2765 bytes result sent to driver
+[2025-03-19T16:21:59.371+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO TaskSetManager: Starting task 24.0 in stage 0.0 (TID 24) (e20319ba40e1, executor driver, partition 24, PROCESS_LOCAL, 9183 bytes)
+[2025-03-19T16:21:59.444+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO Executor: Running task 24.0 in stage 0.0 (TID 24)
+[2025-03-19T16:21:59.450+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO TaskSetManager: Finished task 23.0 in stage 0.0 (TID 23) in 158 ms on e20319ba40e1 (executor driver) (24/46)
+[2025-03-19T16:21:59.499+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO Executor: Finished task 24.0 in stage 0.0 (TID 24). 2759 bytes result sent to driver
+[2025-03-19T16:21:59.503+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO TaskSetManager: Starting task 25.0 in stage 0.0 (TID 25) (e20319ba40e1, executor driver, partition 25, PROCESS_LOCAL, 9180 bytes)
+[2025-03-19T16:21:59.537+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO Executor: Running task 25.0 in stage 0.0 (TID 25)
+[2025-03-19T16:21:59.595+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO TaskSetManager: Finished task 24.0 in stage 0.0 (TID 24) in 168 ms on e20319ba40e1 (executor driver) (25/46)
+[2025-03-19T16:21:59.691+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO Executor: Finished task 25.0 in stage 0.0 (TID 25). 2753 bytes result sent to driver
+[2025-03-19T16:21:59.742+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO TaskSetManager: Starting task 26.0 in stage 0.0 (TID 26) (e20319ba40e1, executor driver, partition 26, PROCESS_LOCAL, 9187 bytes)
+[2025-03-19T16:21:59.745+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO Executor: Running task 26.0 in stage 0.0 (TID 26)
+[2025-03-19T16:21:59.749+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO TaskSetManager: Finished task 25.0 in stage 0.0 (TID 25) in 243 ms on e20319ba40e1 (executor driver) (26/46)
+[2025-03-19T16:21:59.882+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO Executor: Finished task 26.0 in stage 0.0 (TID 26). 2767 bytes result sent to driver
+[2025-03-19T16:21:59.899+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO TaskSetManager: Starting task 27.0 in stage 0.0 (TID 27) (e20319ba40e1, executor driver, partition 27, PROCESS_LOCAL, 9184 bytes)
+[2025-03-19T16:21:59.908+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO Executor: Running task 27.0 in stage 0.0 (TID 27)
+[2025-03-19T16:21:59.917+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO TaskSetManager: Finished task 26.0 in stage 0.0 (TID 26) in 160 ms on e20319ba40e1 (executor driver) (27/46)
+[2025-03-19T16:21:59.937+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO Executor: Finished task 27.0 in stage 0.0 (TID 27). 2718 bytes result sent to driver
+[2025-03-19T16:21:59.943+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO TaskSetManager: Starting task 28.0 in stage 0.0 (TID 28) (e20319ba40e1, executor driver, partition 28, PROCESS_LOCAL, 9186 bytes)
+[2025-03-19T16:21:59.947+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO TaskSetManager: Finished task 27.0 in stage 0.0 (TID 27) in 62 ms on e20319ba40e1 (executor driver) (28/46)
+[2025-03-19T16:21:59.954+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO Executor: Running task 28.0 in stage 0.0 (TID 28)
+[2025-03-19T16:21:59.992+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO Executor: Finished task 28.0 in stage 0.0 (TID 28). 2722 bytes result sent to driver
+[2025-03-19T16:22:00.000+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO TaskSetManager: Starting task 29.0 in stage 0.0 (TID 29) (e20319ba40e1, executor driver, partition 29, PROCESS_LOCAL, 9179 bytes)
+[2025-03-19T16:22:00.003+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO TaskSetManager: Finished task 28.0 in stage 0.0 (TID 28) in 59 ms on e20319ba40e1 (executor driver) (29/46)
+[2025-03-19T16:22:00.017+0000] {subprocess.py:106} INFO - 25/03/19 16:21:59 INFO Executor: Running task 29.0 in stage 0.0 (TID 29)
+[2025-03-19T16:22:00.087+0000] {subprocess.py:106} INFO - 25/03/19 16:22:00 INFO Executor: Finished task 29.0 in stage 0.0 (TID 29). 2708 bytes result sent to driver
+[2025-03-19T16:22:00.098+0000] {subprocess.py:106} INFO - 25/03/19 16:22:00 INFO TaskSetManager: Starting task 30.0 in stage 0.0 (TID 30) (e20319ba40e1, executor driver, partition 30, PROCESS_LOCAL, 9179 bytes)
+[2025-03-19T16:22:00.131+0000] {subprocess.py:106} INFO - 25/03/19 16:22:00 INFO Executor: Running task 30.0 in stage 0.0 (TID 30)
+[2025-03-19T16:22:00.136+0000] {subprocess.py:106} INFO - 25/03/19 16:22:00 INFO TaskSetManager: Finished task 29.0 in stage 0.0 (TID 29) in 104 ms on e20319ba40e1 (executor driver) (30/46)
+[2025-03-19T16:22:00.244+0000] {subprocess.py:106} INFO - 25/03/19 16:22:00 INFO Executor: Finished task 30.0 in stage 0.0 (TID 30). 2794 bytes result sent to driver
+[2025-03-19T16:22:00.253+0000] {subprocess.py:106} INFO - 25/03/19 16:22:00 INFO TaskSetManager: Starting task 31.0 in stage 0.0 (TID 31) (e20319ba40e1, executor driver, partition 31, PROCESS_LOCAL, 9181 bytes)
+[2025-03-19T16:22:00.266+0000] {subprocess.py:106} INFO - 25/03/19 16:22:00 INFO TaskSetManager: Finished task 30.0 in stage 0.0 (TID 30) in 168 ms on e20319ba40e1 (executor driver) (31/46)
+[2025-03-19T16:22:00.270+0000] {subprocess.py:106} INFO - 25/03/19 16:22:00 INFO Executor: Running task 31.0 in stage 0.0 (TID 31)
+[2025-03-19T16:22:00.292+0000] {subprocess.py:106} INFO - 25/03/19 16:22:00 INFO Executor: Finished task 31.0 in stage 0.0 (TID 31). 2712 bytes result sent to driver
+[2025-03-19T16:22:00.300+0000] {subprocess.py:106} INFO - 25/03/19 16:22:00 INFO TaskSetManager: Starting task 32.0 in stage 0.0 (TID 32) (e20319ba40e1, executor driver, partition 32, PROCESS_LOCAL, 9180 bytes)
+[2025-03-19T16:22:00.305+0000] {subprocess.py:106} INFO - 25/03/19 16:22:00 INFO Executor: Running task 32.0 in stage 0.0 (TID 32)
+[2025-03-19T16:22:00.314+0000] {subprocess.py:106} INFO - 25/03/19 16:22:00 INFO TaskSetManager: Finished task 31.0 in stage 0.0 (TID 31) in 56 ms on e20319ba40e1 (executor driver) (32/46)
+[2025-03-19T16:22:00.510+0000] {subprocess.py:106} INFO - 25/03/19 16:22:00 INFO Executor: Finished task 32.0 in stage 0.0 (TID 32). 2753 bytes result sent to driver
+[2025-03-19T16:22:00.559+0000] {subprocess.py:106} INFO - 25/03/19 16:22:00 INFO TaskSetManager: Starting task 33.0 in stage 0.0 (TID 33) (e20319ba40e1, executor driver, partition 33, PROCESS_LOCAL, 9183 bytes)
+[2025-03-19T16:22:00.565+0000] {subprocess.py:106} INFO - 25/03/19 16:22:00 INFO TaskSetManager: Finished task 32.0 in stage 0.0 (TID 32) in 252 ms on e20319ba40e1 (executor driver) (33/46)
+[2025-03-19T16:22:00.568+0000] {subprocess.py:106} INFO - 25/03/19 16:22:00 INFO Executor: Running task 33.0 in stage 0.0 (TID 33)
+[2025-03-19T16:22:00.786+0000] {subprocess.py:106} INFO - 25/03/19 16:22:00 INFO Executor: Finished task 33.0 in stage 0.0 (TID 33). 2716 bytes result sent to driver
+[2025-03-19T16:22:00.801+0000] {subprocess.py:106} INFO - 25/03/19 16:22:00 INFO TaskSetManager: Starting task 34.0 in stage 0.0 (TID 34) (e20319ba40e1, executor driver, partition 34, PROCESS_LOCAL, 9178 bytes)
+[2025-03-19T16:22:00.813+0000] {subprocess.py:106} INFO - 25/03/19 16:22:00 INFO TaskSetManager: Finished task 33.0 in stage 0.0 (TID 33) in 240 ms on e20319ba40e1 (executor driver) (34/46)
+[2025-03-19T16:22:00.821+0000] {subprocess.py:106} INFO - 25/03/19 16:22:00 INFO Executor: Running task 34.0 in stage 0.0 (TID 34)
+[2025-03-19T16:22:01.490+0000] {subprocess.py:106} INFO - 25/03/19 16:22:01 INFO Executor: Finished task 34.0 in stage 0.0 (TID 34). 2749 bytes result sent to driver
+[2025-03-19T16:22:01.580+0000] {subprocess.py:106} INFO - 25/03/19 16:22:01 INFO TaskSetManager: Starting task 35.0 in stage 0.0 (TID 35) (e20319ba40e1, executor driver, partition 35, PROCESS_LOCAL, 9182 bytes)
+[2025-03-19T16:22:01.598+0000] {subprocess.py:106} INFO - 25/03/19 16:22:01 INFO Executor: Running task 35.0 in stage 0.0 (TID 35)
+[2025-03-19T16:22:01.790+0000] {subprocess.py:106} INFO - 25/03/19 16:22:01 INFO TaskSetManager: Finished task 34.0 in stage 0.0 (TID 34) in 884 ms on e20319ba40e1 (executor driver) (35/46)
+[2025-03-19T16:22:01.968+0000] {subprocess.py:106} INFO - 25/03/19 16:22:01 INFO Executor: Finished task 35.0 in stage 0.0 (TID 35). 2757 bytes result sent to driver
+[2025-03-19T16:22:01.992+0000] {subprocess.py:106} INFO - 25/03/19 16:22:01 INFO TaskSetManager: Starting task 36.0 in stage 0.0 (TID 36) (e20319ba40e1, executor driver, partition 36, PROCESS_LOCAL, 9178 bytes)
+[2025-03-19T16:22:01.999+0000] {subprocess.py:106} INFO - 25/03/19 16:22:01 INFO Executor: Running task 36.0 in stage 0.0 (TID 36)
+[2025-03-19T16:22:02.048+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSetManager: Finished task 35.0 in stage 0.0 (TID 35) in 455 ms on e20319ba40e1 (executor driver) (36/46)
+[2025-03-19T16:22:02.135+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO Executor: Finished task 36.0 in stage 0.0 (TID 36). 2706 bytes result sent to driver
+[2025-03-19T16:22:02.191+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSetManager: Starting task 37.0 in stage 0.0 (TID 37) (e20319ba40e1, executor driver, partition 37, PROCESS_LOCAL, 9184 bytes)
+[2025-03-19T16:22:02.196+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO Executor: Running task 37.0 in stage 0.0 (TID 37)
+[2025-03-19T16:22:02.200+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSetManager: Finished task 36.0 in stage 0.0 (TID 36) in 208 ms on e20319ba40e1 (executor driver) (37/46)
+[2025-03-19T16:22:02.262+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO Executor: Finished task 37.0 in stage 0.0 (TID 37). 2718 bytes result sent to driver
+[2025-03-19T16:22:02.285+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSetManager: Starting task 38.0 in stage 0.0 (TID 38) (e20319ba40e1, executor driver, partition 38, PROCESS_LOCAL, 9182 bytes)
+[2025-03-19T16:22:02.290+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO Executor: Running task 38.0 in stage 0.0 (TID 38)
+[2025-03-19T16:22:02.295+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSetManager: Finished task 37.0 in stage 0.0 (TID 37) in 161 ms on e20319ba40e1 (executor driver) (38/46)
+[2025-03-19T16:22:02.395+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO Executor: Finished task 38.0 in stage 0.0 (TID 38). 2800 bytes result sent to driver
+[2025-03-19T16:22:02.419+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSetManager: Starting task 39.0 in stage 0.0 (TID 39) (e20319ba40e1, executor driver, partition 39, PROCESS_LOCAL, 9180 bytes)
+[2025-03-19T16:22:02.430+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO Executor: Running task 39.0 in stage 0.0 (TID 39)
+[2025-03-19T16:22:02.433+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSetManager: Finished task 38.0 in stage 0.0 (TID 38) in 169 ms on e20319ba40e1 (executor driver) (39/46)
+[2025-03-19T16:22:02.512+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO Executor: Finished task 39.0 in stage 0.0 (TID 39). 2710 bytes result sent to driver
+[2025-03-19T16:22:02.524+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSetManager: Starting task 40.0 in stage 0.0 (TID 40) (e20319ba40e1, executor driver, partition 40, PROCESS_LOCAL, 9181 bytes)
+[2025-03-19T16:22:02.528+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO Executor: Running task 40.0 in stage 0.0 (TID 40)
+[2025-03-19T16:22:02.530+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSetManager: Finished task 39.0 in stage 0.0 (TID 39) in 115 ms on e20319ba40e1 (executor driver) (40/46)
+[2025-03-19T16:22:02.604+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO Executor: Finished task 40.0 in stage 0.0 (TID 40). 2712 bytes result sent to driver
+[2025-03-19T16:22:02.607+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSetManager: Starting task 41.0 in stage 0.0 (TID 41) (e20319ba40e1, executor driver, partition 41, PROCESS_LOCAL, 9178 bytes)
+[2025-03-19T16:22:02.633+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO Executor: Running task 41.0 in stage 0.0 (TID 41)
+[2025-03-19T16:22:02.636+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSetManager: Finished task 40.0 in stage 0.0 (TID 40) in 86 ms on e20319ba40e1 (executor driver) (41/46)
+[2025-03-19T16:22:02.652+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO Executor: Finished task 41.0 in stage 0.0 (TID 41). 2749 bytes result sent to driver
+[2025-03-19T16:22:02.658+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSetManager: Starting task 42.0 in stage 0.0 (TID 42) (e20319ba40e1, executor driver, partition 42, PROCESS_LOCAL, 9186 bytes)
+[2025-03-19T16:22:02.668+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO Executor: Running task 42.0 in stage 0.0 (TID 42)
+[2025-03-19T16:22:02.669+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSetManager: Finished task 41.0 in stage 0.0 (TID 41) in 63 ms on e20319ba40e1 (executor driver) (42/46)
+[2025-03-19T16:22:02.706+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO Executor: Finished task 42.0 in stage 0.0 (TID 42). 2722 bytes result sent to driver
+[2025-03-19T16:22:02.710+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSetManager: Starting task 43.0 in stage 0.0 (TID 43) (e20319ba40e1, executor driver, partition 43, PROCESS_LOCAL, 9192 bytes)
+[2025-03-19T16:22:02.718+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSetManager: Finished task 42.0 in stage 0.0 (TID 42) in 61 ms on e20319ba40e1 (executor driver) (43/46)
+[2025-03-19T16:22:02.725+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO Executor: Running task 43.0 in stage 0.0 (TID 43)
+[2025-03-19T16:22:02.757+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO Executor: Finished task 43.0 in stage 0.0 (TID 43). 2777 bytes result sent to driver
+[2025-03-19T16:22:02.759+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSetManager: Starting task 44.0 in stage 0.0 (TID 44) (e20319ba40e1, executor driver, partition 44, PROCESS_LOCAL, 9183 bytes)
+[2025-03-19T16:22:02.764+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO Executor: Running task 44.0 in stage 0.0 (TID 44)
+[2025-03-19T16:22:02.771+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSetManager: Finished task 43.0 in stage 0.0 (TID 43) in 60 ms on e20319ba40e1 (executor driver) (44/46)
+[2025-03-19T16:22:02.802+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO Executor: Finished task 44.0 in stage 0.0 (TID 44). 2716 bytes result sent to driver
+[2025-03-19T16:22:02.805+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSetManager: Starting task 45.0 in stage 0.0 (TID 45) (e20319ba40e1, executor driver, partition 45, PROCESS_LOCAL, 9178 bytes)
+[2025-03-19T16:22:02.806+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO Executor: Running task 45.0 in stage 0.0 (TID 45)
+[2025-03-19T16:22:02.813+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSetManager: Finished task 44.0 in stage 0.0 (TID 44) in 48 ms on e20319ba40e1 (executor driver) (45/46)
+[2025-03-19T16:22:02.853+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO Executor: Finished task 45.0 in stage 0.0 (TID 45). 2706 bytes result sent to driver
+[2025-03-19T16:22:02.882+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSetManager: Finished task 45.0 in stage 0.0 (TID 45) in 77 ms on e20319ba40e1 (executor driver) (46/46)
+[2025-03-19T16:22:02.889+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO DAGScheduler: ResultStage 0 (parquet at NativeMethodAccessorImpl.java:0) finished in 8.311 s
+[2025-03-19T16:22:02.896+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+[2025-03-19T16:22:02.906+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+[2025-03-19T16:22:02.911+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+[2025-03-19T16:22:02.921+0000] {subprocess.py:106} INFO - 25/03/19 16:22:02 INFO DAGScheduler: Job 0 finished: parquet at NativeMethodAccessorImpl.java:0, took 8.596839 s
+[2025-03-19T16:22:03.041+0000] {subprocess.py:106} INFO - 25/03/19 16:22:03 INFO InMemoryFileIndex: It took 10817 ms to list leaf files for 1 paths.
+[2025-03-19T16:22:03.962+0000] {subprocess.py:106} INFO - 25/03/19 16:22:03 INFO SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+[2025-03-19T16:22:03.974+0000] {subprocess.py:106} INFO - 25/03/19 16:22:03 INFO DAGScheduler: Got job 1 (parquet at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2025-03-19T16:22:03.991+0000] {subprocess.py:106} INFO - 25/03/19 16:22:03 INFO DAGScheduler: Final stage: ResultStage 1 (parquet at NativeMethodAccessorImpl.java:0)
+[2025-03-19T16:22:03.997+0000] {subprocess.py:106} INFO - 25/03/19 16:22:03 INFO DAGScheduler: Parents of final stage: List()
+[2025-03-19T16:22:04.000+0000] {subprocess.py:106} INFO - 25/03/19 16:22:03 INFO DAGScheduler: Missing parents: List()
+[2025-03-19T16:22:04.002+0000] {subprocess.py:106} INFO - 25/03/19 16:22:03 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[3] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2025-03-19T16:22:04.035+0000] {subprocess.py:106} INFO - 25/03/19 16:22:04 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 103.2 KiB, free 434.2 MiB)
+[2025-03-19T16:22:04.094+0000] {subprocess.py:106} INFO - 25/03/19 16:22:04 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 37.1 KiB, free 434.1 MiB)
+[2025-03-19T16:22:04.103+0000] {subprocess.py:106} INFO - 25/03/19 16:22:04 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on e20319ba40e1:34773 (size: 37.1 KiB, free: 434.3 MiB)
+[2025-03-19T16:22:04.105+0000] {subprocess.py:106} INFO - 25/03/19 16:22:04 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1585
+[2025-03-19T16:22:04.107+0000] {subprocess.py:106} INFO - 25/03/19 16:22:04 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[3] at parquet at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2025-03-19T16:22:04.112+0000] {subprocess.py:106} INFO - 25/03/19 16:22:04 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks resource profile 0
+[2025-03-19T16:22:04.115+0000] {subprocess.py:106} INFO - 25/03/19 16:22:04 INFO BlockManagerInfo: Removed broadcast_0_piece0 on e20319ba40e1:34773 in memory (size: 36.8 KiB, free: 434.4 MiB)
+[2025-03-19T16:22:04.123+0000] {subprocess.py:106} INFO - 25/03/19 16:22:04 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 46) (e20319ba40e1, executor driver, partition 0, PROCESS_LOCAL, 9226 bytes)
+[2025-03-19T16:22:04.126+0000] {subprocess.py:106} INFO - 25/03/19 16:22:04 INFO Executor: Running task 0.0 in stage 1.0 (TID 46)
+[2025-03-19T16:22:05.114+0000] {subprocess.py:106} INFO - 25/03/19 16:22:05 INFO Executor: Finished task 0.0 in stage 1.0 (TID 46). 2218 bytes result sent to driver
+[2025-03-19T16:22:05.119+0000] {subprocess.py:106} INFO - 25/03/19 16:22:05 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 46) in 998 ms on e20319ba40e1 (executor driver) (1/1)
+[2025-03-19T16:22:05.122+0000] {subprocess.py:106} INFO - 25/03/19 16:22:05 INFO DAGScheduler: ResultStage 1 (parquet at NativeMethodAccessorImpl.java:0) finished in 1.130 s
+[2025-03-19T16:22:05.128+0000] {subprocess.py:106} INFO - 25/03/19 16:22:05 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+[2025-03-19T16:22:05.132+0000] {subprocess.py:106} INFO - 25/03/19 16:22:05 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+[2025-03-19T16:22:05.137+0000] {subprocess.py:106} INFO - 25/03/19 16:22:05 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+[2025-03-19T16:22:05.138+0000] {subprocess.py:106} INFO - 25/03/19 16:22:05 INFO DAGScheduler: Job 1 finished: parquet at NativeMethodAccessorImpl.java:0, took 1.169732 s
+[2025-03-19T16:22:09.652+0000] {subprocess.py:106} INFO - 25/03/19 16:22:09 INFO BlockManagerInfo: Removed broadcast_1_piece0 on e20319ba40e1:34773 in memory (size: 37.1 KiB, free: 434.4 MiB)
+[2025-03-19T16:22:12.667+0000] {subprocess.py:106} INFO - 25/03/19 16:22:12 INFO DataSourceStrategy: Pruning directories with:
+[2025-03-19T16:22:12.680+0000] {subprocess.py:106} INFO - 25/03/19 16:22:12 INFO FileSourceStrategy: Pushed Filters:
+[2025-03-19T16:22:12.689+0000] {subprocess.py:106} INFO - 25/03/19 16:22:12 INFO FileSourceStrategy: Post-Scan Filters:
+[2025-03-19T16:22:13.108+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to restarting. Terminating instance.
+[2025-03-19T16:22:13.121+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-03-19T16:22:13.162+0000] {process_utils.py:132} INFO - Sending 15 to group 977. PIDs of all processes in the group: [979, 1089, 977]
+[2025-03-19T16:22:13.165+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 977
+[2025-03-19T16:22:13.168+0000] {taskinstance.py:3094} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-03-19T16:22:13.209+0000] {taskinstance.py:3095} ERROR - Stacktrace: 
+  File "/home/***/.local/bin/***", line 8, in <module>
+    sys.exit(main())
+  File "/home/***/.local/lib/python3.12/site-packages/***/__main__.py", line 62, in main
+    args.func(args)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 56, in scheduler
+    run_command_with_daemon_option(
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/daemon_utils.py", line 86, in run_command_with_daemon_option
+    callback()
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 59, in <lambda>
+    callback=lambda: _run_scheduler_job(args),
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/scheduler_command.py", line 47, in _run_scheduler_job
+    run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/scheduler_job_runner.py", line 990, in _execute
+    executor.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 392, in start
+    self.impl.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 330, in start
+    worker.start()
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/usr/local/lib/python3.12/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/usr/local/lib/python3.12/multiprocessing/context.py", line 282, in _Popen
+    return Popen(process_obj)
+  File "/usr/local/lib/python3.12/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/usr/local/lib/python3.12/multiprocessing/popen_fork.py", line 71, in _launch
+    code = process_obj._bootstrap(parent_sentinel=child_r)
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 80, in run
+    return super().run()
+  File "/usr/local/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 211, in do_work
+    self.execute_work(key=key, command=command)
+  File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 100, in execute_work
+    state = self._execute_work_in_fork(command)
+  File "/home/***/.local/lib/python3.12/site-packages/***/traces/tracer.py", line 58, in wrapper
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/executors/local_executor.py", line 142, in _execute_work_in_fork
+    args.func(args)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 254, in _run_task_by_selected_method
+    return _run_task_by_local_task_job(args, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 322, in _run_task_by_local_task_job
+    ret = run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/local_task_job_runner.py", line 171, in _execute
+    self.task_runner.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 55, in start
+    self.process = self._start_by_fork()
+  File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/operators/bash.py", line 257, in execute
+    result = self._run_inline_command(bash_path=bash_path, env=env)
+  File "/home/***/.local/lib/python3.12/site-packages/***/operators/bash.py", line 284, in _run_inline_command
+    return self.subprocess_hook.run_command(
+  File "/home/***/.local/lib/python3.12/site-packages/***/hooks/subprocess.py", line 104, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3095, in signal_handler
+    self.log.error("Stacktrace: \n%s", "".join(traceback.format_stack()))
+
+[2025-03-19T16:22:13.217+0000] {subprocess.py:117} INFO - Sending SIGTERM signal to process group
+[2025-03-19T16:22:13.287+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 257, in execute
+    result = self._run_inline_command(bash_path=bash_path, env=env)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 284, in _run_inline_command
+    return self.subprocess_hook.run_command(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/hooks/subprocess.py", line 104, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3097, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-03-19T16:22:13.313+0000] {taskinstance.py:1226} INFO - Marking task as UP_FOR_RETRY. dag_id=pyspark_etl_pipeline, task_id=gold_ingestion, run_id=manual__2025-03-19T05:14:09.222928+00:00, execution_date=20250319T051409, start_date=20250319T162140, end_date=20250319T162213
+[2025-03-19T16:22:13.418+0000] {base.py:84} INFO - Retrieving connection 'smtp_default'
+[2025-03-19T16:22:13.432+0000] {email.py:272} INFO - Email alerting: attempt 1
+[2025-03-19T16:22:13.528+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1089, status='terminated', started='16:21:42') (1089) terminated with exit code None
+[2025-03-19T16:22:14.873+0000] {email.py:283} INFO - Sent an alert email to ['caiovos@hotmail.com']
+[2025-03-19T16:22:15.719+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-19T16:22:15.808+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=977, status='terminated', exitcode=2, started='16:21:39') (977) terminated with exit code 2
+[2025-03-19T16:22:15.812+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=979, status='terminated', started='16:21:40') (979) terminated with exit code None

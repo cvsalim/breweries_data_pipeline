@@ -1,13 +1,12 @@
 # Gold Layer: Get the silver data and connect with the Business needs
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col
 import os
 
 spark = SparkSession.builder.appName("GoldLayer").getOrCreate()
 
 # ETL Paths
-silver_path = "medallion_data/silver_layer"
-gold_path = "medallion_data/gold_layer"
+silver_path = "/opt/airflow/dags/medallion_data/silver_layer"
+gold_path = "/opt/airflow/dags/medallion_data/gold_layer"
 os.makedirs(gold_path, exist_ok=True)
 
 # Load silver data

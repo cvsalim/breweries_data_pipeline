@@ -1,0 +1,191 @@
+[2025-03-19T16:14:57.588+0000] {processor.py:186} INFO - Started process (PID=197) to work on /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:14:57.590+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/silver_ingestion.py for tasks to queue
+[2025-03-19T16:14:57.593+0000] {logging_mixin.py:190} INFO - [2025-03-19T16:14:57.593+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:15:06.179+0000] {logging_mixin.py:190} INFO - DataFrame[address_1: string, address_2: string, address_3: string, brewery_type: string, city: string, country: string, id: string, latitude: string, longitude: string, name: string, phone: string, postal_code: string, state: string, state_province: string, street: string, website_url: string]
+[2025-03-19T16:15:07.986+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:15:08.009+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/silver_ingestion.py took 10.428 seconds
+[2025-03-19T16:15:38.099+0000] {processor.py:186} INFO - Started process (PID=405) to work on /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:15:38.100+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/silver_ingestion.py for tasks to queue
+[2025-03-19T16:15:38.103+0000] {logging_mixin.py:190} INFO - [2025-03-19T16:15:38.103+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:15:44.785+0000] {logging_mixin.py:190} INFO - DataFrame[address_1: string, address_2: string, address_3: string, brewery_type: string, city: string, country: string, id: string, latitude: string, longitude: string, name: string, phone: string, postal_code: string, state: string, state_province: string, street: string, website_url: string]
+[2025-03-19T16:15:47.776+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:15:47.822+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/silver_ingestion.py took 9.733 seconds
+[2025-03-19T16:16:18.705+0000] {processor.py:186} INFO - Started process (PID=859) to work on /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:16:18.707+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/silver_ingestion.py for tasks to queue
+[2025-03-19T16:16:18.711+0000] {logging_mixin.py:190} INFO - [2025-03-19T16:16:18.710+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:16:33.746+0000] {logging_mixin.py:190} INFO - DataFrame[address_1: string, address_2: string, address_3: string, brewery_type: string, city: string, country: string, id: string, latitude: string, longitude: string, name: string, phone: string, postal_code: string, state: string, state_province: string, street: string, website_url: string]
+[2025-03-19T16:16:36.221+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:16:36.258+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/silver_ingestion.py took 17.563 seconds
+[2025-03-19T16:17:06.572+0000] {processor.py:186} INFO - Started process (PID=1256) to work on /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:17:06.574+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/silver_ingestion.py for tasks to queue
+[2025-03-19T16:17:06.579+0000] {logging_mixin.py:190} INFO - [2025-03-19T16:17:06.579+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:17:14.462+0000] {logging_mixin.py:190} INFO - DataFrame[address_1: string, address_2: string, address_3: string, brewery_type: string, city: string, country: string, id: string, latitude: string, longitude: string, name: string, phone: string, postal_code: string, state: string, state_province: string, street: string, website_url: string]
+[2025-03-19T16:17:16.047+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:17:16.075+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/silver_ingestion.py took 9.516 seconds
+[2025-03-19T16:17:46.175+0000] {processor.py:186} INFO - Started process (PID=1454) to work on /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:17:46.176+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/silver_ingestion.py for tasks to queue
+[2025-03-19T16:17:46.180+0000] {logging_mixin.py:190} INFO - [2025-03-19T16:17:46.179+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:17:54.011+0000] {logging_mixin.py:190} INFO - DataFrame[address_1: string, address_2: string, address_3: string, brewery_type: string, city: string, country: string, id: string, latitude: string, longitude: string, name: string, phone: string, postal_code: string, state: string, state_province: string, street: string, website_url: string]
+[2025-03-19T16:17:55.472+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:17:55.492+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/silver_ingestion.py took 9.325 seconds
+[2025-03-19T16:18:25.587+0000] {processor.py:186} INFO - Started process (PID=1652) to work on /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:18:25.588+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/silver_ingestion.py for tasks to queue
+[2025-03-19T16:18:25.592+0000] {logging_mixin.py:190} INFO - [2025-03-19T16:18:25.592+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:18:32.334+0000] {logging_mixin.py:190} INFO - DataFrame[address_1: string, address_2: string, address_3: string, brewery_type: string, city: string, country: string, id: string, latitude: string, longitude: string, name: string, phone: string, postal_code: string, state: string, state_province: string, street: string, website_url: string]
+[2025-03-19T16:18:33.637+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:18:33.657+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/silver_ingestion.py took 8.079 seconds
+[2025-03-19T16:20:55.099+0000] {processor.py:186} INFO - Started process (PID=206) to work on /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:20:55.102+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/silver_ingestion.py for tasks to queue
+[2025-03-19T16:20:55.111+0000] {logging_mixin.py:190} INFO - [2025-03-19T16:20:55.108+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:21:10.275+0000] {logging_mixin.py:190} INFO - root
+ |-- address_1: string (nullable = true)
+ |-- address_2: string (nullable = true)
+ |-- address_3: string (nullable = true)
+ |-- brewery_type: string (nullable = true)
+ |-- city: string (nullable = false)
+ |-- country: string (nullable = true)
+ |-- id: string (nullable = true)
+ |-- latitude: string (nullable = true)
+ |-- longitude: string (nullable = true)
+ |-- name: string (nullable = true)
+ |-- phone: string (nullable = true)
+ |-- postal_code: string (nullable = true)
+ |-- state: string (nullable = true)
+ |-- state_province: string (nullable = true)
+ |-- street: string (nullable = true)
+ |-- website_url: string (nullable = true)
+[2025-03-19T16:21:15.117+0000] {logging_mixin.py:190} INFO - Parquet has been saved: /opt/airflow/dags/medallion_data/silver_layer
+[2025-03-19T16:21:15.119+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:21:15.138+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/silver_ingestion.py took 20.071 seconds
+[2025-03-19T16:21:45.702+0000] {processor.py:186} INFO - Started process (PID=1105) to work on /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:21:45.704+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/silver_ingestion.py for tasks to queue
+[2025-03-19T16:21:45.708+0000] {logging_mixin.py:190} INFO - [2025-03-19T16:21:45.708+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:22:15.732+0000] {logging_mixin.py:190} INFO - [2025-03-19T16:22:15.722+0000] {timeout.py:68} ERROR - Process timed out, PID: 1105
+[2025-03-19T16:22:15.773+0000] {logging_mixin.py:190} INFO - [2025-03-19T16:22:15.737+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/silver_ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/silver_ingestion.py", line 11, in <module>
+    df = spark.read.option("multiline", "true").json(bronze_path)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pyspark/sql/readwriter.py", line 425, in json
+    return self._df(self._jreader.json(self._spark._sc._jvm.PythonUtils.toSeq(path)))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/py4j/java_gateway.py", line 1321, in __call__
+    answer = self.gateway_client.send_command(command)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+                          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/silver_ingestion.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.10.5/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.10.5/best-practices.html#reducing-dag-complexity, PID: 1105
+[2025-03-19T16:22:15.777+0000] {logging_mixin.py:190} INFO - [2025-03-19T16:22:15.776+0000] {clientserver.py:543} INFO - Closing down clientserver connection
+[2025-03-19T16:22:15.780+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:22:15.912+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/silver_ingestion.py took 30.224 seconds
+[2025-03-19T16:22:46.328+0000] {processor.py:186} INFO - Started process (PID=2258) to work on /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:22:46.331+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/silver_ingestion.py for tasks to queue
+[2025-03-19T16:22:46.335+0000] {logging_mixin.py:190} INFO - [2025-03-19T16:22:46.335+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:23:07.958+0000] {logging_mixin.py:190} INFO - root
+ |-- address_1: string (nullable = true)
+ |-- address_2: string (nullable = true)
+ |-- address_3: string (nullable = true)
+ |-- brewery_type: string (nullable = true)
+ |-- city: string (nullable = false)
+ |-- country: string (nullable = true)
+ |-- id: string (nullable = true)
+ |-- latitude: string (nullable = true)
+ |-- longitude: string (nullable = true)
+ |-- name: string (nullable = true)
+ |-- phone: string (nullable = true)
+ |-- postal_code: string (nullable = true)
+ |-- state: string (nullable = true)
+ |-- state_province: string (nullable = true)
+ |-- street: string (nullable = true)
+ |-- website_url: string (nullable = true)
+[2025-03-19T16:23:13.537+0000] {logging_mixin.py:190} INFO - Parquet has been saved: /opt/airflow/dags/medallion_data/silver_layer
+[2025-03-19T16:23:13.539+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:23:13.570+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/silver_ingestion.py took 27.252 seconds
+[2025-03-19T16:23:43.944+0000] {processor.py:186} INFO - Started process (PID=3321) to work on /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:23:43.945+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/silver_ingestion.py for tasks to queue
+[2025-03-19T16:23:43.950+0000] {logging_mixin.py:190} INFO - [2025-03-19T16:23:43.950+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:23:58.747+0000] {logging_mixin.py:190} INFO - root
+ |-- address_1: string (nullable = true)
+ |-- address_2: string (nullable = true)
+ |-- address_3: string (nullable = true)
+ |-- brewery_type: string (nullable = true)
+ |-- city: string (nullable = false)
+ |-- country: string (nullable = true)
+ |-- id: string (nullable = true)
+ |-- latitude: string (nullable = true)
+ |-- longitude: string (nullable = true)
+ |-- name: string (nullable = true)
+ |-- phone: string (nullable = true)
+ |-- postal_code: string (nullable = true)
+ |-- state: string (nullable = true)
+ |-- state_province: string (nullable = true)
+ |-- street: string (nullable = true)
+ |-- website_url: string (nullable = true)
+[2025-03-19T16:24:04.061+0000] {logging_mixin.py:190} INFO - Parquet has been saved: /opt/airflow/dags/medallion_data/silver_layer
+[2025-03-19T16:24:04.063+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:24:04.095+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/silver_ingestion.py took 20.161 seconds
+[2025-03-19T16:24:34.354+0000] {processor.py:186} INFO - Started process (PID=4165) to work on /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:24:34.364+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/silver_ingestion.py for tasks to queue
+[2025-03-19T16:24:34.373+0000] {logging_mixin.py:190} INFO - [2025-03-19T16:24:34.371+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:24:50.417+0000] {logging_mixin.py:190} INFO - root
+ |-- address_1: string (nullable = true)
+ |-- address_2: string (nullable = true)
+ |-- address_3: string (nullable = true)
+ |-- brewery_type: string (nullable = true)
+ |-- city: string (nullable = false)
+ |-- country: string (nullable = true)
+ |-- id: string (nullable = true)
+ |-- latitude: string (nullable = true)
+ |-- longitude: string (nullable = true)
+ |-- name: string (nullable = true)
+ |-- phone: string (nullable = true)
+ |-- postal_code: string (nullable = true)
+ |-- state: string (nullable = true)
+ |-- state_province: string (nullable = true)
+ |-- street: string (nullable = true)
+ |-- website_url: string (nullable = true)
+[2025-03-19T16:24:54.049+0000] {logging_mixin.py:190} INFO - Parquet has been saved: /opt/airflow/dags/medallion_data/silver_layer
+[2025-03-19T16:24:54.050+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:24:54.072+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/silver_ingestion.py took 19.771 seconds
+[2025-03-19T16:25:24.371+0000] {processor.py:186} INFO - Started process (PID=4931) to work on /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:25:24.373+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/silver_ingestion.py for tasks to queue
+[2025-03-19T16:25:24.376+0000] {logging_mixin.py:190} INFO - [2025-03-19T16:25:24.376+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:25:33.552+0000] {logging_mixin.py:190} INFO - root
+ |-- address_1: string (nullable = true)
+ |-- address_2: string (nullable = true)
+ |-- address_3: string (nullable = true)
+ |-- brewery_type: string (nullable = true)
+ |-- city: string (nullable = false)
+ |-- country: string (nullable = true)
+ |-- id: string (nullable = true)
+ |-- latitude: string (nullable = true)
+ |-- longitude: string (nullable = true)
+ |-- name: string (nullable = true)
+ |-- phone: string (nullable = true)
+ |-- postal_code: string (nullable = true)
+ |-- state: string (nullable = true)
+ |-- state_province: string (nullable = true)
+ |-- street: string (nullable = true)
+ |-- website_url: string (nullable = true)
+[2025-03-19T16:25:37.117+0000] {logging_mixin.py:190} INFO - Parquet has been saved: /opt/airflow/dags/medallion_data/silver_layer
+[2025-03-19T16:25:37.118+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:25:37.134+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/silver_ingestion.py took 12.771 seconds
+[2025-03-19T16:26:07.715+0000] {processor.py:186} INFO - Started process (PID=5683) to work on /opt/airflow/dags/silver_ingestion.py
+[2025-03-19T16:26:07.717+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/silver_ingestion.py for tasks to queue
+[2025-03-19T16:26:07.719+0000] {logging_mixin.py:190} INFO - [2025-03-19T16:26:07.719+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/silver_ingestion.py
