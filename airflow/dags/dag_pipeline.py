@@ -24,6 +24,9 @@ default_args = {
     'start_date': datetime(2024, 3, 18),
     'retries': 1,
     'on_failure_callback': notify_failure,
+    'email':['caiovos@hotmail.com'],
+    'email_on_failure': True,
+    'email_on_retry': True
 }
 
 dag = DAG(
