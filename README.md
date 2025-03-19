@@ -2,7 +2,8 @@
 
 
 This documentation covers the construction of a data pipeline related to breweries in various locations. The following architecture was considered for this structure.  
-![arqetl](https://github.com/user-attachments/assets/89ac627f-8a4c-49ca-aaa2-d0bef5b549de)
+![arqetl](https://github.com/user-attachments/assets/7383540e-2b4a-4142-a261-b1aafa7aa799)
+
 ## Architecture  
 
 The pipeline follows the **medallion architecture model**, where the ETL process goes through the **bronze, silver, and gold** layers:  
@@ -62,23 +63,62 @@ To ensure proper functionality, the container must have Java, JDK, and PySpark i
 
 ## Manual Installation Steps (if needed)
 1. If Java and JDK need to be installed, run the following in your local terminal:
+
   docker exec -u root -it <airflow-scheduler-container-id> /bin/bash
+  
   apt update && apt install -y default-jdk
+  
 2. If JAVA_HOME needs to be set, use:
-  export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java))))
+   
+  export JAVA_HOME=$(dirname $ ( dirname $(readlink -f $ ( which java))))
+  
   echo "export JAVA_HOME=$JAVA_HOME" >> ~/.bashrc
+  
   source ~/.bashrc
+  
 3. If PySpark needs to be installed, use:
+
   apt update && apt install -y python3-pip
+  
   pip3 install --upgrade pip
+  
   pip3 install pyspark
+
 ## **Solution Configuration**
-Set Up email Alerts
 The pipeline includes a task monitoring service that sends email notifications whenever:
   A task fails, or
   The pipeline completes successfully.
-  To enable this feature, configure your email account in DAG parameter:
+  To enable this feature, configure your email account in DAG parameter 'send_email'.
+  You should receive an email as the following
+  
+![failtask](https://github.com/user-attachments/assets/ff583c48-8394-47af-a0c4-acde0abffce0)
 
 Run **pyspark_etl_pipeline**
 After a few minutes, the pipeline should execute end-to-end, performing all ETL processes.
 You should receive a success email notification.
+There is the result of the orchestration and the Data curated is save in `medallion_data/gold_layer`.
+![unnamed](https://github.com/user-attachments/assets/d35e29f0-f031-4487-9459-a81f11d4a210)
+
+## **Next Steps**
+As the next steps, it is recommended to implement solutions focused on generating business value based on the data from the gold layer. This data can be used to create reports that provide valuable insights for decision-makers, fostering a data-driven culture.
+
+One possible approach is to deploy the Metabase application using Docker, a tool capable of connecting to the data source and enabling ad hoc analysis and dashboard creation.
+
+## **Cloud Architectures**
+The solution was designed in an agnostic and local manner; however, there is the possibility of replicating this solution in Cloud Computing platforms. This would provide benefits such as greater scalability, additional functionalities, resilience, and other key aspects relevant in a real business environment.
+
+For this reason, below are examples of architectures for this solution in AWS and Azure:
+
+**Data Pipeline on AWS**
+For this scenario in AWS, a Lambda function can be used to call the API and save the data into an S3 bucket. EMR functions can process the data and utilize Spark for the silver and gold layers, storing the results in S3 buckets. The entire workflow can be orchestrated using Step Functions or Airflow.
+
+CloudWatch can be integrated with Lambda and SNS to provide alerts and notifications for error management. Additionally, data analysis can be performed using Athena, and dashboards can be created with QuickSight.
+![awsawsrc](https://github.com/user-attachments/assets/48f5e4fe-bc74-45ed-b34b-97e24703c019)
+
+
+**Data Pipeline on Azure**
+For this scenario, following a similar approach, Azure Functions or Azure Container Instances (ACI) can be used for the bronze layer. Azure Data Factory can handle orchestration, while Databricks can process data in the subsequent layers. Azure Storage can be used for data storage.
+
+For monitoring and alerts, Azure Monitor and Azure Alerts can be utilized.
+![azerre](https://github.com/user-attachments/assets/3f73de79-7100-4767-bdda-adc766711911)
+
