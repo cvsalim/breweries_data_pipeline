@@ -69,3 +69,24 @@ Please take a look at these docs to improve your DAG import time:
 [2025-03-19T16:25:53.428+0000] {logging_mixin.py:190} INFO - Gold data has been stored
 [2025-03-19T16:25:53.430+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/gold_ingestion.py
 [2025-03-19T16:25:53.448+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gold_ingestion.py took 9.126 seconds
+[2025-03-19T17:31:52.932+0000] {processor.py:186} INFO - Started process (PID=202) to work on /opt/airflow/dags/gold_ingestion.py
+[2025-03-19T17:31:52.939+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gold_ingestion.py for tasks to queue
+[2025-03-19T17:31:52.951+0000] {logging_mixin.py:190} INFO - [2025-03-19T17:31:52.948+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gold_ingestion.py
+[2025-03-19T17:32:15.442+0000] {logging_mixin.py:190} INFO - Gold data has been stored
+[2025-03-19T17:32:15.444+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/gold_ingestion.py
+[2025-03-19T17:32:15.482+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gold_ingestion.py took 22.584 seconds
+[2025-03-19T17:32:45.960+0000] {processor.py:186} INFO - Started process (PID=984) to work on /opt/airflow/dags/gold_ingestion.py
+[2025-03-19T17:32:45.961+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gold_ingestion.py for tasks to queue
+[2025-03-19T17:32:45.966+0000] {logging_mixin.py:190} INFO - [2025-03-19T17:32:45.965+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gold_ingestion.py
+[2025-03-19T17:33:08.134+0000] {logging_mixin.py:190} INFO - Gold data has been stored
+[2025-03-19T17:33:08.151+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/gold_ingestion.py
+[2025-03-19T17:33:08.757+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gold_ingestion.py took 22.803 seconds
+[2025-03-19T17:33:39.257+0000] {processor.py:186} INFO - Started process (PID=2518) to work on /opt/airflow/dags/gold_ingestion.py
+[2025-03-19T17:33:39.259+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gold_ingestion.py for tasks to queue
+[2025-03-19T17:33:39.266+0000] {logging_mixin.py:190} INFO - [2025-03-19T17:33:39.265+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gold_ingestion.py
+[2025-03-19T17:34:03.677+0000] {logging_mixin.py:190} INFO - Gold data has been stored
+[2025-03-19T17:34:03.678+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/gold_ingestion.py
+[2025-03-19T17:34:03.702+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gold_ingestion.py took 24.460 seconds
+[2025-03-19T17:34:34.157+0000] {processor.py:186} INFO - Started process (PID=3389) to work on /opt/airflow/dags/gold_ingestion.py
+[2025-03-19T17:34:34.159+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gold_ingestion.py for tasks to queue
+[2025-03-19T17:34:34.162+0000] {logging_mixin.py:190} INFO - [2025-03-19T17:34:34.161+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gold_ingestion.py
