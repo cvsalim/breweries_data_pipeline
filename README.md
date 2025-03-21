@@ -17,7 +17,7 @@ Additionally, the following Jupyter notebooks are used for development and testi
 - **dev_notebook_silver.ipynb** – Used for testing data transformation and storage in the silver layer.  
 - **dev_notebook_gold.ipynb** – Used for testing data transformation and storage in the gold layer.  
 
-These files interact with `airflow/dags/dag_pipeline.py`, which contains the **main logic of the solution**. The **Airflow DAG** orchestrates the execution of scripts, testing, alerts, and email notifications via Gmail regarding the pipeline execution status, ensuring efficiency, quality, and failure management.  
+These files interact with **airflow/dags/dag_pipeline.py**, which contains the **main logic of the solution**. The **Airflow DAG** orchestrates the execution of scripts, testing, alerts, and email notifications via Gmail regarding the pipeline execution status, ensuring efficiency, quality, and failure management.  
 
 ---
 
@@ -85,18 +85,21 @@ To ensure proper functionality, the container must have Java, JDK, and PySpark i
   pip3 install pyspark
 
 ## **Solution Configuration**
-The pipeline includes a task monitoring service that sends email notifications whenever:
+**Notify tasks:** The pipeline includes a task monitoring service that sends email notifications whenever:
   A task fails, or
   The pipeline completes successfully.
-  To enable this feature, configure your email account in DAG parameter 'send_email'.
+  To enable this feature, configure your email account in **airflow/dags/dag_pipeline.py** parameter 'send_email'.
   You should receive an email as the following
   
 ![failtask](https://github.com/user-attachments/assets/ff583c48-8394-47af-a0c4-acde0abffce0)
 
+**(If needed)** To run the success notification task is necessary to set up the Connection smtp. To do this, go to connections in airflow and add the connection as following, also, add the token in the password field.
+![image](https://github.com/user-attachments/assets/a0d1c603-d3a8-408a-9872-116cb1ef924b)
+
 Run **pyspark_etl_pipeline**
 After a few minutes, the pipeline should execute end-to-end, performing all ETL processes.
 You should receive a success email notification.
-There is the result of the orchestration and the Data curated is save in `medallion_data/gold_layer`.
+There is the **result** of the orchestration and the Data curated is save in `medallion_data/gold_layer`.
 ![unnamed](https://github.com/user-attachments/assets/d35e29f0-f031-4487-9459-a81f11d4a210)
 
 ## **Next Steps**
