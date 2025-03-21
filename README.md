@@ -47,7 +47,7 @@ For this solution, **Docker** must be installed, as it is used to create the con
 1. Install and configure **Docker Desktop** for your operating system: [Docker Installation Guide](https://docs.docker.com/desktop/setup/install/windows-install/).  
 2. After cloning the repository, open a terminal in the `airflow` folder and start the container with:  
    ```sh
-   docker-compose up airflow-init  
+   docker-compose up --build  
    docker-compose up  
 ## **Accessing Airflow**
 After starting the container, you can access **Apache Airflow** by navigating to:
