@@ -44,7 +44,7 @@ For this solution, **Docker** must be installed, as it is used to create the con
 - `.env` – Contains environment variables.  
 
 ### **Installation Steps**  
-1. Install and configure **Docker Desktop** for your operating system: [Docker Installation Guide](https://docs.docker.com/desktop/setup/install/windows-install/).  
+1. Install and configure **Docker ** according to operating system: [Docker Installation Guide](https://docs.docker.com/desktop/setup/install/windows-install/).  
 2. After cloning the repository, open a terminal in the `airflow` folder and start the container with:  
    ```sh
    docker-compose up --build  
